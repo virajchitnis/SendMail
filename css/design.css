@@ -3,12 +3,33 @@
 }
 html, body {
 	height: 100%;
+	background-color: grey;
 }
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -2em;
+}
+#top_space {
+	width: 100%;
+	height: 12%;
+}
+#layout_table {
+	width: 100%;
+}
+.side_space {
+	width: 20%;
+}
+.main_space {
+	width: 60%;
+}
+#main_div {
+	background-color: white;
+	box-shadow: 4px 4px 2px #424242;
+}
+#top_bar {
+	background-color: black;
 }
 .footer, .push {
 	height: 2em;
