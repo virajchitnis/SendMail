@@ -6,6 +6,7 @@ html, body {
 	background-color: grey;
 }
 #overlay_background {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -15,6 +16,7 @@ html, body {
 	background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
 #overlay_body {
+	display: none;
     width: 300px;
     height: 200px;
     line-height: 200px;

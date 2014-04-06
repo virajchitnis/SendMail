@@ -10,3 +10,13 @@ function changeTitle () {
 		document.getElementById('message_title').innerHTML = subject;
 	}
 }
+
+function showSignature () {
+	document.getElementById('overlay_background').style.display = "block";
+	document.getElementById('overlay_body').style.display = "block";
+}
+
+function hideSignature () {
+	document.getElementById('overlay_background').style.display = "none";
+	document.getElementById('overlay_body').style.display = "none";
+}
