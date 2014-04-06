@@ -107,7 +107,7 @@ textarea {
 	border: 1px solid #ccc;
 	width: 100%;
 }
-#bottom_bar {
+.bottom_bar {
 	background-color: #F2F2F2;
 }
 .bottom_bar_layout {

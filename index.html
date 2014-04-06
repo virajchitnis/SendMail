@@ -16,8 +16,10 @@
 					</tr>
 				</table>
 			</div>
-			<textarea id="signature_text" rows="5"></textarea>
-			<button class="bottom_button" onclick="hideSignature()">Save</button>
+			<textarea id="signature_text" rows="5" placeholder="Your signature"></textarea>
+			<div class="bottom_bar">
+				<button class="bottom_button" onclick="hideSignature()">Save</button>
+			</div>
 		</div>
 		<div class="wrapper">
 			<div id="top_space"></div>
@@ -46,7 +48,7 @@
 								<input type="text" placeholder="Subject" id="mail_subject" onchange="changeTitle()">
 								<textarea id="message_text" rows="15"></textarea>
 							</form>
-							<div id="bottom_bar">
+							<div class="bottom_bar">
 								<table class="bottom_bar_layout">
 									<tr>
 										<td class="bottom_bar_left">
