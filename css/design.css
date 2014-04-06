@@ -50,17 +50,31 @@ input[type=submit] {
     cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-	margin-left: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 textarea {
+	font-size: 10pt;
 	padding: 5px;
 	border: 1px solid #ccc;
 	width: 100%;
 }
 #bottom_bar {
 	background-color: #F2F2F2;
+}
+.bottom_button {
+	color: white;
+	padding: 5px 15px;
+	background: #8181F7;
+	border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-size: 9pt;
 }
 .footer, .push {
 	height: 2em;
