@@ -26,7 +26,7 @@ html, body {
 }
 #main_div {
 	background-color: white;
-	box-shadow: 4px 4px 2px #424242;
+	box-shadow: 10px 10px 5px #424242;
 }
 #top_bar {
 	background-color: black;
@@ -43,17 +43,24 @@ input[type=text]:focus {
 	border-color: #333;
 }
 input[type=submit] {
+	color: white;
 	padding: 5px 15px;
-	background: #ccc;
+	background: #8181F7;
 	border: 0 none;
     cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 textarea {
 	padding: 5px;
 	border: 1px solid #ccc;
 	width: 100%;
+}
+#bottom_bar {
+	background-color: #F2F2F2;
 }
 .footer, .push {
 	height: 2em;
