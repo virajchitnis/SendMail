@@ -27,12 +27,15 @@
 					<td id="main_space">
 						<div id="main_div">
 							<div id="top_bar">
-								<table>
+								<table class="top_bar_layout">
 									<tr>
-										<td>
+										<td class="top_bar_left">
 											<p class="top_bar_space">&nbsp;</p>
 											<p id="top_bar_text">&nbsp;&nbsp;<span id="message_title">New Message</span></p>
 											<p class="top_bar_space">&nbsp;</p>
+										</td>
+										<td class="top_bar_right">
+											<img src="images/top_bar_buttons">
 										</td>
 									</tr>
 								</table>
@@ -44,12 +47,12 @@
 								<textarea id="message_text" rows="15"></textarea>
 							</form>
 							<div id="bottom_bar">
-								<table id="bottom_bar_layout">
+								<table class="bottom_bar_layout">
 									<tr>
-										<td id="bottom_bar_left">
+										<td class="bottom_bar_left">
 											<button class="bottom_button" onclick="messageSend()">Send</button>
 										</td>
-										<td id="bottom_bar_right">
+										<td class="bottom_bar_right">
 											<button class="bottom_button" onclick="showSignature()">Signature</button>
 										</td>
 									</tr>

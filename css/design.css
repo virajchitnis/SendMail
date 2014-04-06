@@ -16,7 +16,7 @@ html, body {
 	background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
 #overlay_top_bar {
-	background-color: black;
+	background-color: #424242;
 }
 #overlay_top_bar_text {
 	color: white;
@@ -59,7 +59,18 @@ html, body {
 	box-shadow: 5px 5px 2px #424242;
 }
 #top_bar {
-	background-color: black;
+	background-color: #424242;
+}
+.top_bar_layout {
+	width: 100%;
+}
+.top_bar_left {
+	width: 50%;
+	text-align: left;
+}
+.top_bar_right {
+	width: 50%;
+	text-align: right;
 }
 #top_bar_text {
 	color: white;
@@ -99,14 +110,14 @@ textarea {
 #bottom_bar {
 	background-color: #F2F2F2;
 }
-#bottom_bar_layout {
+.bottom_bar_layout {
 	width: 100%;
 }
-#bottom_bar_left {
+.bottom_bar_left {
 	width: 50%;
 	text-align: left;
 }
-#bottom_bar_right {
+.bottom_bar_right {
 	width: 50%;
 	text-align: right;
 }
