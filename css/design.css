@@ -31,6 +31,12 @@ html, body {
 #top_bar {
 	background-color: black;
 }
+#top_bar_text {
+	color: white;
+}
+.top_bar_space {
+	font-size: 5px;
+}
 input {
 	font-size: 10pt;
 }

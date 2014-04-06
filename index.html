@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/design.css">
+		<script src="js/index.js"></script>
 		<title>SendMail</title>
 	</head>
 	<body>
@@ -12,12 +13,20 @@
 					<td id="main_space">
 						<div id="main_div">
 							<div id="top_bar">
-								<h3>&nbsp;</h3>
+								<table>
+									<tr>
+										<td>
+											<p class="top_bar_space">&nbsp;</p>
+											<p id="top_bar_text">&nbsp;&nbsp;<span id="message_title">New Message</span></p>
+											<p class="top_bar_space">&nbsp;</p>
+										</td>
+									</tr>
+								</table>
 							</div>
 							<form>
 								<input type="text" placeholder="From"><br>
 								<input type="text" placeholder="To"><br>
-								<input type="text" placeholder="Subject">
+								<input type="text" placeholder="Subject" id="mail_subject" onchange="changeTitle()">
 								<textarea rows="15"></textarea>
 							</form>
 							<div id="bottom_bar">
