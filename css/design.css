@@ -3,7 +3,7 @@
 }
 html, body {
 	height: 100%;
-	background-color: grey;
+	background-color: #BDBDBD;
 }
 #overlay_background {
 	display: none;
@@ -56,7 +56,7 @@ html, body {
 }
 #main_div {
 	background-color: white;
-	box-shadow: 5px 5px 2px #424242;
+	box-shadow: 8px 8px 4px #6E6E6E;
 }
 #top_bar {
 	background-color: #424242;
