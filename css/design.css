@@ -63,6 +63,17 @@ textarea {
 #bottom_bar {
 	background-color: #F2F2F2;
 }
+#bottom_bar_layout {
+	width: 100%;
+}
+#bottom_bar_left {
+	width: 50%;
+	text-align: left;
+}
+#bottom_bar_right {
+	width: 50%;
+	text-align: right;
+}
 .bottom_button {
 	color: white;
 	padding: 5px 15px;
@@ -72,6 +83,7 @@ textarea {
     -webkit-border-radius: 5px;
     border-radius: 5px;
 	margin-left: 2px;
+	margin-right: 2px;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	font-size: 9pt;
