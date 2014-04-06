@@ -17,6 +17,11 @@ function showSignature () {
 }
 
 function hideSignature () {
+	var signature = document.getElementById('signature_text').value;
+	var message = document.getElementById('message_text').value;
+	
+	document.getElementById('message_text').value = message + "\n\n" + signature;
+	
 	document.getElementById('overlay_background').style.display = "none";
 	document.getElementById('overlay_body').style.display = "none";
 }
