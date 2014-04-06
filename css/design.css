@@ -36,6 +36,9 @@ html, body {
     //text-align: center;
     z-index: 11; /* 1px higher than the overlay layer */
 }
+#signature_text {
+	resize: none;
+}
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
