@@ -41,13 +41,13 @@
 								<input type="text" placeholder="From"><br>
 								<input type="text" placeholder="To"><br>
 								<input type="text" placeholder="Subject" id="mail_subject" onchange="changeTitle()">
-								<textarea rows="15"></textarea>
+								<textarea id="message_text" rows="15"></textarea>
 							</form>
 							<div id="bottom_bar">
 								<table id="bottom_bar_layout">
 									<tr>
 										<td id="bottom_bar_left">
-											<button class="bottom_button">Send</button>
+											<button class="bottom_button" onclick="messageSend()">Send</button>
 										</td>
 										<td id="bottom_bar_right">
 											<button class="bottom_button" onclick="showSignature()">Signature</button>

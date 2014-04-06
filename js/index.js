@@ -20,3 +20,7 @@ function hideSignature () {
 	document.getElementById('overlay_background').style.display = "none";
 	document.getElementById('overlay_body').style.display = "none";
 }
+
+function messageSend () {
+	document.getElementById('response_message_div').style.display = "block";
+}
