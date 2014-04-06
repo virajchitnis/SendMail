@@ -31,6 +31,30 @@ html, body {
 #top_bar {
 	background-color: black;
 }
+input {
+	font-size: 10pt;
+}
+input[type=text] {
+	padding: 5px;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+input[type=text]:focus {
+	border-color: #333;
+}
+input[type=submit] {
+	padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+textarea {
+	padding: 5px;
+	border: 1px solid #ccc;
+	width: 100%;
+}
 .footer, .push {
 	height: 2em;
 	text-align: center;
