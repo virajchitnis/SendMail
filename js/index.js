@@ -53,14 +53,12 @@ function messageSend () {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.setRequestHeader("Content-length", params.length);
 	xmlhttp.setRequestHeader("Connection", "close");
-	xmlhttp.onreadystatechange = dataPosted();
+	xmlhttp.onreadystatechange = function () {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			document.getElementById("response_message").innerHTML = xmlhttp.responseText;
+		}
+	}
 	xmlhttp.send(params);
 	
 	document.getElementById('response_message_div').style.display = "block";
 }
-
-function dataPosted () {
-	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-		document.getElementById("response_message").innerHTML = xmlhttp.responseText;
-	}
- }
