@@ -41,6 +41,13 @@ function messageSend () {
 	var message_form = document.getElementById('message_form');
 	var email = new Message();
 	
+	for (var i = 0; i < message_form.length; i++) {
+		if (message_form.elements[i].value == null || message_form.elements[i].value == "") {
+			alert("No fields can be blank");
+			return false;
+		}
+	}
+	
 	email.from = message_form.elements[0].value;
 	email.to = message_form.elements[1].value;
 	email.subject = message_form.elements[2].value;
