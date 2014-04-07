@@ -9,7 +9,7 @@
 		    'X-Mailer: PHP/'.phpversion();
 
 		if (mail($email['to'], $email['subject'], $email['message'], $headers)) {
-			echo "Your message has successfully been sent.";
+			echo "Your message has been sent successfully.";
 		}
 		else {
 			echo "Your message was not sent, please try again later.";

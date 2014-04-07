@@ -62,6 +62,12 @@ function messageSend () {
 	xmlhttp.setRequestHeader("Connection", "close");
 	xmlhttp.onreadystatechange = function () {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			for (var i = 0; i < message_form.length; i++) {
+				message_form.elements[i].value = "";
+			}
+			
+			document.title = "SendMail";
+			document.getElementById('message_title').innerHTML = "New Message";
 			document.getElementById("response_message").innerHTML = xmlhttp.responseText;
 			document.getElementById('response_message_div').style.display = "block";
 		}
