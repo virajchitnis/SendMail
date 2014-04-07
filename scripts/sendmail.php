@@ -6,7 +6,7 @@
 		
 		$headers = 'From: '.$email['from']."\r\n".
 		    'Reply-To: '.$email['from']."\r\n".
-		    'X-Mailer: PHP/'.phpversion();
+		    'X-Mailer: SendMail '.exec("git describe").' by Viraj Chitnis';
 
 		if (mail($email['to'], $email['subject'], $email['message'], $headers)) {
 			echo "Your message has been sent successfully.";
