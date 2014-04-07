@@ -12,7 +12,7 @@
 			echo "Your message has been sent successfully.";
 		}
 		else {
-			echo "Your message was not sent, please try again later.";
+			echo "Your message could not be sent, please try again later.";
 		}
 	}
 	else {

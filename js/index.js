@@ -1,5 +1,4 @@
-var xmlhttp = new XMLHttpRequest();
-var notificationTimer;
+var notificationTimer = null;
 
 function Message () {
 	this.from;
@@ -16,7 +15,7 @@ function changeTitle () {
 		document.getElementById('message_title').innerHTML = "New Message";
 	}
 	else {
-		document.title = "SendMail - " + subject;
+		document.title = subject + " - SendMail";
 		document.getElementById('message_title').innerHTML = subject;
 	}
 }
@@ -30,7 +29,7 @@ function hideSignature () {
 	var signature = document.getElementById('signature_text').value;
 	var message = document.getElementById('message_text').value;
 	
-	if (!((message == null) || (message == ""))) {
+	if (!((signature == null) || (signature == ""))) {
 		document.getElementById('message_text').value = message + "\n\n" + signature;
 	}
 	
@@ -44,7 +43,16 @@ function messageSend () {
 	
 	for (var i = 0; i < message_form.length; i++) {
 		if (message_form.elements[i].value == null || message_form.elements[i].value == "") {
-			alert("No fields can be blank");
+			document.getElementById("response_message").innerHTML = "No fields can be blank";
+			document.getElementById('response_message_div').style.display = "block";
+			
+			if (notificationTimer == null) {
+				notificationTimer = setInterval(timeTracker, 10000);
+			}
+			else {
+				clearInterval(notificationTimer);
+				notificationTimer = setInterval(timeTracker, 10000);
+			}
 			return false;
 		}
 	}
@@ -57,6 +65,7 @@ function messageSend () {
 	var jsonified = JSON.stringify(email);
 	
 	var params = "json=" + jsonified;
+	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("POST", "scripts/sendmail.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.setRequestHeader("Content-length", params.length);
@@ -72,7 +81,13 @@ function messageSend () {
 			document.getElementById("response_message").innerHTML = xmlhttp.responseText;
 			document.getElementById('response_message_div').style.display = "block";
 			
-			notificationTimer = setInterval(timeTracker, 30000);
+			if (notificationTimer == null) {
+				notificationTimer = setInterval(timeTracker, 30000);
+			}
+			else {
+				clearInterval(notificationTimer);
+				notificationTimer = setInterval(timeTracker, 30000);
+			}
 		}
 		else {
 			document.getElementById("response_message").innerHTML = "Error, try again.";
