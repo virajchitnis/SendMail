@@ -1,4 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
+var notificationTimer;
 
 function Message () {
 	this.from;
@@ -70,10 +71,19 @@ function messageSend () {
 			document.getElementById('message_title').innerHTML = "New Message";
 			document.getElementById("response_message").innerHTML = xmlhttp.responseText;
 			document.getElementById('response_message_div').style.display = "block";
+			
+			notificationTimer = setInterval(timeTracker, 30000);
 		}
 		else {
+			document.getElementById("response_message").innerHTML = "Error, try again.";
 			document.getElementById('response_message_div').style.display = "block";
 		}
 	}
 	xmlhttp.send(params);
+}
+
+
+function timeTracker () {
+	clearInterval(notificationTimer);
+	document.getElementById('response_message_div').style.display = "none";
 }
