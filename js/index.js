@@ -66,7 +66,7 @@ function messageSend () {
 	
 	var params = "json=" + jsonified;
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("POST", "scripts/sendmail.php", true);
+	xmlhttp.open("POST", "scripts/sendmail", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.setRequestHeader("Content-length", params.length);
 	xmlhttp.setRequestHeader("Connection", "close");
@@ -105,7 +105,7 @@ function timeTracker () {
 
 function displayVersion () {
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", "scripts/version.php", true);
+	xmlhttp.open("GET", "scripts/version", true);
 	xmlhttp.onreadystatechange = function () {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			document.getElementById("version_display").innerHTML = " " + xmlhttp.responseText + " ";
