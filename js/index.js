@@ -63,9 +63,11 @@ function messageSend () {
 	xmlhttp.onreadystatechange = function () {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			document.getElementById("response_message").innerHTML = xmlhttp.responseText;
+			document.getElementById('response_message_div').style.display = "block";
+		}
+		else {
+			document.getElementById('response_message_div').style.display = "block";
 		}
 	}
 	xmlhttp.send(params);
-	
-	document.getElementById('response_message_div').style.display = "block";
 }
