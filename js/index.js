@@ -48,10 +48,13 @@ function messageSend () {
 	
 	var jsonified = JSON.stringify(email);
 	
-	xmlhttp.onreadystatechange = dataPosted();
+	var params = "json=" + jsonified;
 	xmlhttp.open("POST", "scripts/sendmail.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send("json=" + jsonified);
+	xmlhttp.setRequestHeader("Content-length", params.length);
+	xmlhttp.setRequestHeader("Connection", "close");
+	xmlhttp.onreadystatechange = dataPosted();
+	xmlhttp.send(params);
 	
 	document.getElementById('response_message_div').style.display = "block";
 }
