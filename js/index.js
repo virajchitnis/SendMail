@@ -34,6 +34,14 @@ function checkCookie(cname) {
 	}
 }
 
+function startsWith (str, prefix) {
+    return str.lastIndexOf(prefix, 0) === 0;
+}
+ 
+function endsWith (str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
 function changeTitle () {
 	var subject = document.getElementById('mail_subject').value;
 	
@@ -60,7 +68,9 @@ function hideSignature () {
 	var message = document.getElementById('message_text').value;
 	
 	if (!((signature == null) || (signature == ""))) {
-		document.getElementById('message_text').value = message + "\n\n" + signature;
+		if (!(endsWith(message, signature))) {
+			document.getElementById('message_text').value = message + "\n\n" + signature;
+		}
 		setCookie("signature", signature, 30);
 	}
 	
