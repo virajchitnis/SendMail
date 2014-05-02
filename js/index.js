@@ -56,9 +56,9 @@ function changeTitle () {
 }
 
 function showSignature () {
-	if (checkCookie("signature")) {
+	/*if (checkCookie("signature")) {
 		document.getElementById('signature_text').value = getCookie("signature");
-	}
+	}*/
 	document.getElementById('overlay_background').style.display = "block";
 	document.getElementById('overlay_body').style.display = "block";
 }
@@ -71,7 +71,7 @@ function hideSignature () {
 		if (!(endsWith(message, signature))) {
 			document.getElementById('message_text').value = message + "\n\n" + signature;
 		}
-		setCookie("signature", signature, 30);
+		//setCookie("signature", signature, 30);
 	}
 	
 	document.getElementById('overlay_background').style.display = "none";
