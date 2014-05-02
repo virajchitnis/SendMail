@@ -39,7 +39,7 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -2em;
+	margin: 0 auto -3em;
 }
 #top_space {
 	width: 100%;
@@ -157,9 +157,9 @@ textarea {
 	border-radius: 5px;
 }
 .footer, .push {
-	height: 2em;
+	height: 3em;
 	text-align: center;
 }
 .footer_text {
-	font-size: 8pt;
+	font-size: 10pt;
 }
