@@ -7,6 +7,6 @@ This project was built to demo a redesigned version of the Gmail compose window 
 Requirements
 ------------
 
-Apache 2.2+
-PHP 5+
-Postfix
+* Apache 2.2+
+* PHP 5+
+* Postfix
