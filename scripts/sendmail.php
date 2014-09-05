@@ -6,6 +6,7 @@
 		
 		$headers = 'From: '.$email['from']."\r\n".
 		    'Reply-To: '.$email['from']."\r\n".
+			'Content-type: text/html; charset=utf-8'."\r\n".
 		    'X-Mailer: SendMail '.exec("git describe").' by Viraj Chitnis';
 
 		if (mail($email['to'], $email['subject'], $email['message'], $headers)) {
